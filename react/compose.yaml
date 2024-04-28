@@ -1,0 +1,35 @@
+# services:
+#   app:
+#     build: .
+#     ports:
+#       - "3000:3000"
+#     tty: true
+#     # stdin_open: true
+#     command: 
+#     volumes:
+#     - ./src:/usr/src/app
+
+# services:
+#   app:
+#     build: .
+#     ports:
+#       - "3000:3000"
+#     tty: true
+#     stdin_open: true
+#     volumes:
+#       - ./src:/usr/src/app
+    # volumes:
+    # - type: bind
+    #   source: ./src
+    #   target: /usr/src/app
+    # command: sh -c "cd react-app && yarn start"
+
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    tty: true
+    stdin_open: true
+    volumes:
+      - .:/usr/src/app
